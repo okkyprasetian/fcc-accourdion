@@ -3,7 +3,7 @@ import Card from './Card'
 function Cards({ qA }) {
     return (
         <div className="cards">
-            {console.log(qA)}
+            {qA.map(obj => <Card key={obj.id} obj={obj} />)}
         </div>
     );
 }
