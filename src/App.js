@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import data from './data.js'
+import Title from './components/Title'
+import Cards from './components/Cards'
 
 function App() {
 
@@ -8,6 +10,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="main">
+        <Title />
+        <Cards />
+      </div>
     </div>
   );
 }
