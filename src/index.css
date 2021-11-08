@@ -4,8 +4,20 @@
 }
 
 .main {
-  width: 50%;
+  display: grid;
+  grid-template-areas:
+    'title'
+    'cards';
+  width: 80%;
   margin: 0 auto;
+}
+
+.title {
+  grid-area: title;
+}
+
+.cards {
+  grid-area: cards;
 }
 
 .card-top {
@@ -15,4 +27,13 @@
 
 .btn {
   width: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    width: 70%;
+    grid-template-areas:
+      'title cards';
+    grid-template-columns: 1fr 2fr;
+  }
 }
