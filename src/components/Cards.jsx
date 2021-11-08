@@ -1,9 +1,9 @@
 import Card from './Card'
 
-function Cards({ qA }) {
+function Cards({ qA, toggleAnswer }) {
     return (
         <div className="cards">
-            {qA.map(obj => <Card key={obj.id} obj={obj} />)}
+            {qA.map(obj => <Card key={obj.id} obj={obj} toggleAnswer={toggleAnswer} />)}
         </div>
     );
 }

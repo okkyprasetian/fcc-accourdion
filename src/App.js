@@ -40,12 +40,24 @@ function App() {
     ]
   )
 
+  // Set State
+  const toggleAnswer = id => {
+    const newQA = [...qA].map(obj => {
+      if (obj.id !== id) return obj
+      else {
+        obj.buttonC = !obj.buttonC
+        return obj
+      }
+    })
+
+    setQA(newQA)
+  }
+
   return (
     <div className="App">
       <div className="main">
-        {console.log(qA)}
         <Title />
-        <Cards qA={qA} />
+        <Cards qA={qA} toggleAnswer={toggleAnswer} />
       </div>
     </div>
   );

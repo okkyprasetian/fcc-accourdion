@@ -1,7 +1,7 @@
-function Button() {
+function Button({ toggleAnswer, obj }) {
     return (
-        <button className="btn">
-            +
+        <button onClick={() => toggleAnswer(obj.id)} className="btn">
+            {obj.buttonC ? '-' : '+'}
         </button>
     );
 }
