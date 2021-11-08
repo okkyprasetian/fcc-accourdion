@@ -1,10 +1,9 @@
 import Card from './Card'
 
-function Cards() {
+function Cards({ qA }) {
     return (
         <div className="cards">
-            <Card />
-            <Card />
+            {console.log(qA)}
         </div>
     );
 }
