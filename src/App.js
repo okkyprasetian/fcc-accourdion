@@ -5,7 +5,7 @@ import Cards from './components/Cards'
 function App() {
 
   // State
-  const qA = useState(
+  const [qA, setQA] = useState(
     [
       {
         id: 1,
@@ -43,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <div className="main">
+        {console.log(qA)}
         <Title />
         <Cards qA={qA} />
       </div>
